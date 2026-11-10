@@ -1,0 +1,57 @@
+### Testes da API (extensão "REST Client" do VS Code ou Thunder Client)
+@base = http://localhost:3000
+
+### Saúde
+GET {{base}}/saude
+
+### Listar todos
+GET {{base}}/jogos
+
+### Filtrar por gênero
+GET {{base}}/jogos?genero=RPG
+
+### Buscar por texto
+GET {{base}}/jogos?busca=zelda
+
+### Buscar um jogo
+GET {{base}}/jogos/1
+
+### Jogo inexistente (esperado: 404)
+GET {{base}}/jogos/999
+
+### Criar (esperado: 201)
+POST {{base}}/jogos
+Content-Type: application/json
+
+{
+  "titulo": "Hades II",
+  "genero": "Roguelike",
+  "categoria": "Roguelike de ação",
+  "descricao": "A nova jornada de Melinoë contra o Titã do Tempo.",
+  "nota": 9.3,
+  "ano": 2025,
+  "plataformas": ["PC"]
+}
+
+### Criar sem título (esperado: 400)
+POST {{base}}/jogos
+Content-Type: application/json
+
+{ "genero": "RPG", "ano": 2024, "nota": 8 }
+
+### Atualizar
+PUT {{base}}/jogos/1
+Content-Type: application/json
+
+{
+  "titulo": "Elden Ring",
+  "genero": "RPG",
+  "categoria": "RPG / Soulslike",
+  "descricao": "Um RPG de ação num mundo aberto épico.",
+  "nota": 9.7,
+  "ano": 2022,
+  "plataformas": ["PC", "PS5", "Xbox"]
+}
+
+### Excluir (esperado: 204)
+DELETE {{base}}/jogos/2

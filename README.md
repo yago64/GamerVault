@@ -6,7 +6,7 @@ A Home segue o estilo de catálogo de streaming: destaque grande no topo e filei
 ## O que o app faz
 
 | Recurso | Onde 
-|---|---|---|
+|---|---|
 | Fileiras estilo Netflix, destaque, pull-to-refresh | Aba **Início** |
 | Busca, filtro por gênero e ordenação | Aba **Buscar** |
 | Minha Lista (favoritos) | Aba **Minha Lista** | 19 |

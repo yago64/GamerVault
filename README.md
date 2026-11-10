@@ -5,21 +5,21 @@ A Home segue o estilo de catálogo de streaming: destaque grande no topo e filei
 
 ## O que o app faz
 
-| Recurso | Onde | Aula |
+| Recurso | Onde 
 |---|---|---|
-| Fileiras estilo Netflix, destaque, pull-to-refresh | Aba **Início** | 1 a 16 |
-| Busca, filtro por gênero e ordenação | Aba **Buscar** | 1 a 16 |
+| Fileiras estilo Netflix, destaque, pull-to-refresh | Aba **Início** |
+| Busca, filtro por gênero e ordenação | Aba **Buscar** |
 | Minha Lista (favoritos) | Aba **Minha Lista** | 19 |
-| Detalhes, criar, editar e excluir jogos (CRUD) | `detalhes/[id]`, `jogo/form` | 17, 18 |
-| API REST em Node.js + Express | pasta `api/` | 17, 18 |
-| Perfil e Minha Lista salvos no aparelho (AsyncStorage) | contextos `context/` | 19 |
-| Foto de perfil pela câmera + permissões | `camera.tsx` | 20 |
-| Latitude, longitude e cidade do jogador | Aba **Perfil** | 20 |
-| Compartilhar jogo (Share API) | tela de detalhes | 21 |
-| Escolher capa e avatar na galeria | `jogo/form`, Perfil | 21 |
-| Exportar e importar a Minha Lista em arquivo `.json` | Aba **Minha Lista** | 21 |
-| Cadastro com máscaras e validação (CPF, e-mail, data...) | `cadastro.tsx` | 1 a 16 |
-| Build de APK com EAS | `eas.json` | 22 |
+| Detalhes, criar, editar e excluir jogos (CRUD) | `detalhes/[id]`, `jogo/form` | 
+| API REST em Node.js + Express | pasta `api/` |
+| Perfil e Minha Lista salvos no aparelho (AsyncStorage) | contextos `context/` |
+| Foto de perfil pela câmera + permissões | `camera.tsx` |
+| Latitude, longitude e cidade do jogador | Aba **Perfil** |
+| Compartilhar jogo (Share API) | tela de detalhes |
+| Escolher capa e avatar na galeria | `jogo/form`, Perfil |
+| Exportar e importar a Minha Lista em arquivo `.json` | Aba **Minha Lista** |
+| Cadastro com máscaras e validação (CPF, e-mail, data...) | `cadastro.tsx` |
+| Build de APK com EAS | `eas.json` |
 
 **Funciona sem a API.** Quando o servidor não responde, o app usa a cópia salva no aparelho
 (e o catálogo inicial na primeira execução). Alterações feitas nesse modo valem só no aparelho e o app avisa isso.
@@ -79,8 +79,3 @@ data/           catálogo inicial e temas por gênero
 utils/          validações, máscaras, busca e montagem das fileiras
 api/            servidor Express (CRUD de jogos)
 ```
-
-## Capas dos jogos
-
-Jogos sem imagem ganham um pôster gerado com as cores e o ícone do gênero. Para usar capas reais,
-escolha uma imagem da galeria ao criar/editar o jogo ou preencha o campo `capa` com uma URL no catálogo.
